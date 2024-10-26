@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Blog{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding-bottom: 60px; /* Space for the footer */
+        }
+        .header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+        .nav {
+            display: flex;
+            justify-content: center; /* Center the navigation items */
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-link {
+            color: #ffffff;
+            margin: 0 15px; /* Space between links */
+            text-decoration: none;
+            font-size: 1.2rem; /* Adjust font size if needed */
+        }
+        .nav-link:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>My Booklet</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/blogs" class="nav-link">Blog</a></li>
+                <li><a href="/contact" class="nav-link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Content Block -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
